@@ -20,6 +20,7 @@ pipeline{
                 bat 'echo Executing tests...'
                 bat 'npm run alltests'
                 bat 'Tests are executed successfully!'
+                bat 'Execution results are added to the reports folder!'
             }
         }
     }
