@@ -5,7 +5,7 @@ pipeline{
             steps{
                 bat 'echo Trying to clone github repository...'
                 checkout scm
-                bat 'successfully cloned github repository!'
+                bat 'echo successfully cloned github repository!'
             }
         }
         stage('Install dependencies'){
@@ -19,8 +19,8 @@ pipeline{
             steps{
                 bat 'echo Executing tests...'
                 bat 'npm run alltests'
-                bat 'Tests are executed successfully!'
-                bat 'Execution results are added to the reports folder!'
+                bat 'echo Tests are executed successfully!'
+                bat 'echo Execution results are added to the reports folder!'
             }
         }
     }
