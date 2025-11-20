@@ -30,11 +30,20 @@ pipeline{
                 bat 'echo Execution results are added to the reports folder!'
             }
         }
-        stage('show the folder structure'){
-            steps{
-                bat 'echo Displaying folder structure...'
-                bat 'tree'
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML([
+                    reportDir: 'reports',
+                    reportFiles: 'cucumber.html',
+                    reportName: 'Cucumber Test Report'
+                ])
             }
         }
+        // stage('show the folder structure'){
+        //     steps{
+        //         bat 'echo Displaying folder structure...'
+        //         bat 'tree'
+        //     }
+        // }
     }
 }
