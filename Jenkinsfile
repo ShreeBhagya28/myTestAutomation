@@ -15,6 +15,13 @@ pipeline{
                 bat 'echo Dependencies are installed successfully!'
             }
         }
+        stage('Deleting existing reports folder'){
+            steps{
+                bat 'echo Deleting reports folder if already exists...'
+                bat 'if exists reports rmdir /s /q reports'
+                bat 'echo No reports folder exists now...'
+            }
+        }
         stage('Executing test automations scripts'){
             steps{
                 bat 'echo Executing tests...'
