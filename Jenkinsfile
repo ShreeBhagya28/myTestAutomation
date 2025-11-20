@@ -18,7 +18,7 @@ pipeline{
         stage('Deleting existing reports folder'){
             steps{
                 bat 'echo Deleting reports folder if already exists...'
-                bat 'if exists reports rmdir /s /q reports'
+                bat 'if exist reports rmdir /s /q reports'
                 bat 'echo No reports folder exists now...'
             }
         }
