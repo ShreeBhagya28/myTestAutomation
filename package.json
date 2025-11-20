@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mkdir -p reports && cucumber-js --format json:reports/cucumber.json",
+    "test": "mkdir reports && cucumber-js --format json:reports/cucumber.json",
     "report": "node report.js",
     "alltests": "npm run test && npm run report",
     "localtest": "cucumber-js --tags @saucelab_login"
